@@ -13,7 +13,7 @@ layout: default
         <span>{{ job.start_date }}</span> - <span>{{ job.end_date }}</span>
         <h3>{{ job.role }}</h3>
         <h4>{{ job.company }}</h4>
-        <p>{{ job.description }}</p>
+        <!-- <p>{{ job.description }}</p> -->
       </div>
     </div>
   </div>
