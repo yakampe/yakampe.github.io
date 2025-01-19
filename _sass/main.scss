@@ -1,3 +1,96 @@
-.current {
-    color: green;
+/* General reset */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensures the body takes the full viewport height */
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Layout container */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 40px; /* Increased padding for a bigger nav bar */
+    text-align: left;
+    font-size: 1.2rem; /* Larger font size for better readability */
+    
+    /* Mobile-friendly layout */
+    @media (max-width: 768px) {
+        padding: 15px 30px; /* Adjust padding for mobile */
+        font-size: 1.1rem; /* Adjust font size for smaller screens */
+    }
+    
+    /* Extra-large screens */
+    @media (min-width: 1200px) {
+        padding: 25px 50px; /* Larger padding for bigger screens */
+    }
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+    
+    /* Mobile-friendly styling */
+    @media (max-width: 768px) {
+        font-size: 1.1rem; /* Adjust font size on mobile devices */
+    }
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Scrollable content section */
+section {
+    flex: 1; /* Allows section to fill available space */
+    overflow-y: auto; /* Enables scrolling within the section only */
+    padding: 20px;
+    background-color: #fff;
+    margin: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Content styling within the section */
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section li {
+    margin-bottom: 20px;
+}
+
+section li a {
+    font-size: 1.2em;
+    color: #007acc;
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+section li p {
+    margin: 10px 0 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }
