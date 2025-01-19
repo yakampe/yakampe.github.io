@@ -1,4 +1,13 @@
+
+
+
 <nav>
-    <a href="/">Home</a>
-    <a href="/blog/">Blog</a>
+
+    <a href="/"}>Home</a>
+{% for page in site.pages %}
+    {% if page.name != "404.html" %}
+        <a href={{ page.url }}>{{page.title}}</a>
+    {% endif %}
+    
+{% endfor %}
 </nav>
