@@ -1,3 +1,5 @@
+$iterator-count: 3n;
+
 .timeline {
   display: flex;
   flex-direction: column;
@@ -13,7 +15,6 @@
   position: relative;
   width: 75%;
   gap: 20px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
   padding: 20px;
   align-items: center;
   background-color: transparent;
@@ -21,17 +22,20 @@
   @media (max-width: 980px) {
     width: 90%;
   };
+  cursor: pointer;
+  transition: opacity 0.75s ease, visibility 0.75s ease, transform 0.3s ease, background-color 0.3s ease;
 }
 
 .timeline-item:hover {
   transform: translateX(0) scale(1.1) rotate(0.5deg);
 }
 
-.timeline-item:hover:nth-child(even) {
+
+.timeline-item:hover:nth-child(#{$iterator-count})  {
   transform: translateX(0) scale(1.1) rotate(0.8deg);
 }
 
-.timeline-item:nth-child(even) {
+.timeline-item:nth-child(#{$iterator-count})  {
   flex-direction: row-reverse;
   .timeline-content {
     justify-content: end;
@@ -49,6 +53,25 @@
 .company-logo {
   width: 96px;
   border-radius: 50%;
+}
+
+.further-details {
+  position: absolute; /* Remove from document flow */
+  top: 100%; /* Position it below the timeline item */
+  left: 0;
+  width: 100%;
+  visibility: hidden; /* Initially hidden */
+  opacity: 0; /* Invisible by default */
+  transform: translateY(0px); /* Start from above */
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s; /* Smooth transition */
+}
+
+.further-details.show {
+  position: relative;
+  visibility: visible; /* Make it visible */
+  opacity: 1;
+  transform: translateY(24px); /* Slide into place */
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s; /* Immediate visibility change */
 }
 
 .details h3 {

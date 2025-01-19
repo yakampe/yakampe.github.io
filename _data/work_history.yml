@@ -3,19 +3,24 @@
   start_date: "2024 September"
   end_date: "Present"
   logo: "/assets/images/galvanize.png"
-  # description: "Conducting advanced research in artificial intelligence and natural language processing."
+  description: "Conducting advanced research in artificial intelligence and natural language processing. Conducting advanced research in artificial intelligence and natural language processing.
+  Conducting advanced research in artificial intelligence and natural language processing. Conducting advanced research in artificial intelligence and natural language processing."
+  languages: "Python, Java, COBOL"
+  id: 1
 - company: "UK Data Service"
   role: "Development Manager"
   start_date: "2023 June"
   end_date: "2024 June"
   logo: "/assets/images/dataservice.png"
-  # description: "Developed scalable web applications and contributed to the design of cutting-edge systems."
+  description: "Developed scalable web applications and contributed to the design of cutting-edge systems."
+  id: 2
 - company: "CodeWorks Inc"
   role: "Intern"
   start_date: "2017"
   end_date: "2018"
   logo: "/assets/images/logo.png"
   description: "Worked on debugging and enhancing client projects under senior developers' guidance."
+  id: 3
 # - company: "CodeWorks Inc"
 #   role: "Intern"
 #   start_date: "2017"
