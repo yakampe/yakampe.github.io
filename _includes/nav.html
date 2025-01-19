@@ -1,0 +1,9 @@
+<nav>
+    <a href="/"} {% if page.url == "/" %} class="current"{% endif %}>Home</a>
+    {% for p in site.pages %}
+        {% if p.name != "404.html" %}
+            <a href={{ p.url }}{% if page.url == p.url %} class="current"{% endif %}>{{p.title}}</a>
+        {% endif %}
+        
+    {% endfor %}
+</nav>
