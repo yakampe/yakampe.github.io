@@ -27,6 +27,12 @@ nav {
         padding: 15px 30px; /* Adjust padding for mobile */
         font-size: 1.1rem; /* Adjust font size for smaller screens */
     }
+
+
+    @media (max-width: 980px) {
+        padding: 30px 40px;
+        font-size: 2rem; 
+    }
     
     /* Extra-large screens */
     @media (min-width: 1200px) {
@@ -44,13 +50,17 @@ nav a {
     @media (max-width: 768px) {
         font-size: 1.1rem; /* Adjust font size on mobile devices */
     }
+
+    @media (max-width: 980px) {
+        padding: 24px 24px;
+        font-size: 2rem; 
+    }
     
     &:hover {
         text-decoration: underline;
     }
 }
 
-/* Scrollable content section */
 section {
     flex: 1; /* Allows section to fill available space */
     overflow-y: auto; /* Enables scrolling within the section only */
