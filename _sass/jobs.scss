@@ -1,4 +1,4 @@
-$iterator-count: 3n;
+$iterator-count: 2n;
 
 .timeline {
   display: flex;
@@ -19,11 +19,12 @@ $iterator-count: 3n;
   align-items: center;
   background-color: transparent;
 
+  cursor: pointer;
+  transition: opacity 0.75s ease, visibility 0.75s ease, transform 0.3s ease, background-color 0.3s ease;
+
   @media (max-width: 980px) {
     width: 90%;
   };
-  cursor: pointer;
-  transition: opacity 0.75s ease, visibility 0.75s ease, transform 0.3s ease, background-color 0.3s ease;
 }
 
 .timeline-item:hover {
@@ -55,23 +56,20 @@ $iterator-count: 3n;
   border-radius: 50%;
 }
 
-.further-details {
-  position: absolute; /* Remove from document flow */
-  top: 100%; /* Position it below the timeline item */
-  left: 0;
-  width: 100%;
-  visibility: hidden; /* Initially hidden */
-  opacity: 0; /* Invisible by default */
-  transform: translateY(0px); /* Start from above */
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s; /* Smooth transition */
+.job-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
 }
 
-.further-details.show {
-  position: relative;
-  visibility: visible; /* Make it visible */
+.collapsible.open {
+  max-height: 100%;
   opacity: 1;
-  transform: translateY(24px); /* Slide into place */
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s; /* Immediate visibility change */
+}
+
+.timeline-item:nth-child(even) .details-header {
+  text-align: right;
 }
 
 .details h3 {
@@ -88,4 +86,53 @@ $iterator-count: 3n;
 .details p {
   margin: 0;
   color: #666;
+}
+
+
+.technologies {
+  display: flex;     
+  flex-wrap: nowrap;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tech-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.tech-name {
+  font-size: 0.9rem;
+}
+
+
+.small-technologies {
+  display: flex;     
+  flex-wrap: nowrap;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+
+.timeline-item:nth-child(even) .small-technologies {
+  flex-direction: row-reverse;
+}
+
+.small-tech-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.small-tech-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }

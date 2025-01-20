@@ -3,45 +3,62 @@
   start_date: "2024 September"
   end_date: "Present"
   logo: "/assets/images/galvanize.png"
-  description: "Conducting advanced research in artificial intelligence and natural language processing. Conducting advanced research in artificial intelligence and natural language processing.
-  Conducting advanced research in artificial intelligence and natural language processing. Conducting advanced research in artificial intelligence and natural language processing."
-  languages: "Python, Java, COBOL"
+  description: "
+  As an Enterprise Instructor at Galvanize, I deliver hands-on training in XP practices such as <b>Test Driven Development (TDD),
+   Pair Programming, and Agile ceremonies</b>, helping teams adopt methodologies that improve software quality and collaboration.
+    I lead lectures, facilitate interactive activities, embed with team to coach students through their business' projects, with a strong 
+    focus on applying TDD and adapting other XP practices. In addition to guiding teams in agile development, I contribute to curriculum 
+    development to ensure that the learning experience is continuously improving and supports successful engineering outcomes.
+  "
+  tech: Spring, Java, Python, COBOL, GitLab
   id: 1
 - company: "UK Data Service"
   role: "Development Manager"
   start_date: "2023 June"
   end_date: "2024 June"
   logo: "/assets/images/dataservice.png"
-  description: "Developed scalable web applications and contributed to the design of cutting-edge systems."
+  description: "
+  Championed engineering craftspersonship by cultivating a culture of learning, where I introduced dedicated learning hours
+   for deliberate practice in key areas including Test-Driven Development (TDD), SOLID principles, among others
+  <br>
+  <br>
+  Encouraged a continuous learning environment by promoting knowledge sharing among team members and stakeholders, fostering an
+   open mindset towards experimentation and learning from setbacks.
+  <br>
+  <br>
+  Focused on the coaching and development of engineering teams, providing regular feedback and personal development opportunities to
+   enhance skills, experience, and team performance.
+  <br>
+  <br>
+  Enhanced transparency and nurtured a psychologically safe environment by actively fostering a culture of reciprocal feedback.
+   I consistently created opportunities for both team and individual reflection, focusing on frequent and structured engagements to enable open dialogue and continuous improvement.
+  <br>
+  <br>
+  Initiated and led the change from traditional methodologies to focusing on agile values and principles, significantly enhancing
+   adaptability, stakeholder input, and product development pace. By fostering autonomy and reshaping team dynamics to embrace
+   cross-functional principles, I notably optimised flow of value and feature delivery efficiency.
+  <br>
+  <br>
+  Led initiatives to enhance the approach to system security, resilience, and scalability, ensuring these principles were central
+   to decision-making and integrated into the architecture and platform development efforts.
+  "
+  tech: aws, Python, GitHub
   id: 2
-- company: "CodeWorks Inc"
-  role: "Intern"
-  start_date: "2017"
-  end_date: "2018"
-  logo: "/assets/images/logo.png"
-  description: "Worked on debugging and enhancing client projects under senior developers' guidance."
+- company: "Grabyo"
+  role: "Senior Software Engineer"
+  start_date: "2022 June"
+  end_date: "2023 March"
+  logo: "/assets/images/grabyo.png"
+  description: "
+  As part of the platform team at Grabyo, I played a significant role in enabling stream-aligned teams.
+   This empowerment allowed teams to focus on delivering value sooner, alleviating stress on security concerns and similar impediments.
+   <!----><br><br><!---->
+   I took the initiative and collaborated with the team to implement pivotal changes in development processes. This encompassed limiting
+    work in process, transitioning from Scrum to Kanban, and addressing siloed behaviours within the department
+  <!----><br><br><!---->
+  Utilising the Locust load testing framework, I established automated performance tests for a mission-critical service.
+  <!----><br><br><!---->
+  I also inherited ownership of the Open Policy Agent (OPA) implementation and successfully finalised its rollout across the platform.
+  "
+  tech: Spring, Java, AWS, GitHub
   id: 3
-# - company: "CodeWorks Inc"
-#   role: "Intern"
-#   start_date: "2017"
-#   end_date: "2018"
-#   logo: "/assets/images/logo.png"
-#   description: "Worked on debugging and enhancing client projects under senior developers' guidance."
-# - company: "CodeWorks Inc"
-#   role: "Intern"
-#   start_date: "2017"
-#   end_date: "2018"
-#   logo: "/assets/images/logo.png"
-#   description: "Worked on debugging and enhancing client projects under senior developers' guidance."
-# - company: "CodeWorks Inc"
-#   role: "Intern"
-#   start_date: "2017"
-#   end_date: "2018"
-#   logo: "/assets/images/logo.png"
-#   description: "Worked on debugging and enhancing client projects under senior developers' guidance."
-# - company: "CodeWorks Inc"
-#   role: "Intern"
-#   start_date: "2017"
-#   end_date: "2018"
-#   logo: "/assets/images/logo.png"
-#   description: "Worked on debugging and enhancing client projects under senior developers' guidance."
