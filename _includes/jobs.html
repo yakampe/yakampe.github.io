@@ -16,7 +16,7 @@
                 {% assign tech_list = job.tech | split: ", " %}
                 {% for tech in tech_list %}
                     <div class="small-tech-item">
-                        <img src="/assets/images/tech/{{ tech | downcase }}.png" alt="{{ tech }}" class="small-tech-logo">
+                        <img src="/assets/images/tech_logos/{{ tech | downcase }}.png" alt="{{ tech }}" class="small-tech-logo">
                     </div>
                 {% endfor %}
 
@@ -30,7 +30,7 @@
               {% assign tech_list = job.tech | split: ", " %}
               {% for tech in tech_list %}
                 <div class="tech-item">
-                  <img src="/assets/images/tech/{{ tech | downcase }}.png" alt="{{ tech }}" class="tech-logo">
+                  <img src="/assets/images/tech_logos/{{ tech | downcase }}.png" alt="{{ tech }}" class="tech-logo">
                 </div>
               {% endfor %}
             </div>
