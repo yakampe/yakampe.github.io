@@ -10,7 +10,7 @@
     focus on applying TDD and adapting other XP practices. In addition to guiding teams in agile development, I contribute to curriculum 
     development to ensure that the learning experience is continuously improving and supports successful engineering outcomes.
   "
-  tech: Spring, Java, Python, COBOL, GitLab
+  tech: spring, java, python, cobol, gitlab
   id: 1
 - company: "UK Data Service"
   role: "Development Manager"
@@ -42,7 +42,7 @@
   Led initiatives to enhance the approach to system security, resilience, and scalability, ensuring these principles were central
    to decision-making and integrated into the architecture and platform development efforts.
   "
-  tech: aws, Python, GitHub
+  tech: aws, python, github
   id: 2
 - company: "Grabyo"
   role: "Senior Software Engineer"
@@ -60,5 +60,5 @@
   <!----><br><br><!---->
   I also inherited ownership of the Open Policy Agent (OPA) implementation and successfully finalised its rollout across the platform.
   "
-  tech: Spring, Java, AWS, GitHub
+  tech: spring, java, aws, github
   id: 3
