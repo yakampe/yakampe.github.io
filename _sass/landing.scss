@@ -1,0 +1,65 @@
+/* Jobs Section Header */
+.jobs-section-header {
+    font-size: 2.5rem; /* Make the header larger */
+    font-weight: 600; /* Slightly bold */
+    color: #333; /* Dark grey text colour */
+    text-align: center; /* Centre the text */
+    margin-top: 40px; /* Space from the top of the section */
+    margin-bottom: 20px; /* Space below the header */
+    position: relative;
+}
+
+/* Add an underline effect */
+.jobs-section-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+    margin-top: 10px; /* Space between text and line */
+}
+
+/* Optional: Add some responsive typography */
+@media (max-width: 768px) {
+    .jobs-section-header {
+        font-size: 2rem; /* Slightly smaller font size on smaller screens */
+    }
+}
+
+
+
+/* chevron */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    height: 2000px; /* Just for demo purposes */
+    text-align: center;
+    padding-top: 100px;
+}
+
+.chevron {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    opacity: 1;
+    transition: opacity 0.3s;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-20px);
+    }
+}

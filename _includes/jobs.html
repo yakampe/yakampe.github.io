@@ -1,4 +1,5 @@
 
+<!-- <div class="timeline" style="background-image: url('/assets/images/bgs/bgtest.png');"> -->
 <div class="timeline">
     {% for job in site.data.work_history %}
     <div class="timeline-item" id="job-{{job.id}}">
@@ -8,9 +9,9 @@
       <div class="timeline-content">
         <div class="details">
             <div class="details-header">
-                <span>{{ job.start_date }}</span> - <span>{{ job.end_date }}</span>
-                <h3>{{ job.role }}</h3>
-                <h4>{{ job.company }}</h4>
+                <h3>{{ job.company }}</h3>
+                <h4><i>{{ job.role }}</i></h4>
+                <sup><span>{{ job.start_date }}</span> - <span>{{ job.end_date }}</span></sup>
 
                 <div class="small-technologies">
                 {% assign tech_list = job.tech | split: ", " %}
@@ -50,13 +51,13 @@
     
     timelineItems.forEach((item) => {
       item.addEventListener('click', () => {
-        console.log(item)
         // If the clicked item is the same as the active one, reset everything
         if (activeItem === item.id) {
           activeItem = null; // Clear the active item
     
           timelineItems.forEach((otherItem) => {
             otherItem.style.opacity = '1'; // Reset opacity of all timeline items
+            item.className = 'timeline-item';
             item.querySelector(".small-technologies").style.display = 'flex';
           });
   
@@ -74,7 +75,9 @@
           timelineItems.forEach((otherItem) => {
             if (otherItem.id !== item.id) {
               otherItem.style.opacity = '0.35'; // Dim other items
+              otherItem.className = 'timeline-item';
             } else {
+              item.className += ' timeline-mobile';
               otherItem.style.opacity = '1'; // Keep the clicked item at full opacity
               item.querySelector(".small-technologies").style.display = 'none';
             }
@@ -85,6 +88,7 @@
               jobDetail.style.maxHeight = `${jobDetail.scrollHeight}px`; // Expand dynamically
               jobDetail.style.opacity = '1'; // Fade in
             } else {
+              
               // Collapse all other job details
               jobDetail.style.maxHeight = '0';
               jobDetail.style.opacity = '0';

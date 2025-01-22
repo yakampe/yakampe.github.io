@@ -1,0 +1,25 @@
+<header class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1 class="hero-title">Hi, I'm Jānis</h1>
+            <h2 class="hero-name-pronounc">/ˈjænəs/</h2>
+
+            <div class="hero-ribbon">
+                {% for job in site.data.tech %}
+                    {% assign tech_list = job.tech | split: ", " %}
+                    {% for tech in tech_list %}
+                        <div class="small-tech-item">
+                            <img src="/assets/images/tech_logos/{{ tech | downcase }}.png" alt="{{ tech }}" class="small-tech-logo">
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+            <p class="hero-subtitle">A Web Developer with a Passion for Building Beautiful Things</p>
+
+            <a href="/about" class="hero-cta">Learn More</a>
+        </div>
+        <div class="hero-image">
+            <img src="/assets/images/bgs/bgtest.png" alt="A descriptive alt text about you or your work">
+        </div>
+    </div>
+</header>

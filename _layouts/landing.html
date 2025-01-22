@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% include head.html %}
+</head>
+
+<body>
+    <div class="landing-wrap">
+        <div class="content-landing">
+            {% include hero.html %}
+        </div>
+        <div id="chevron" class="chevron">&#x2193;</div>
+        <header>
+            <h1 class="jobs-section-header">Work History</h1>
+        </header>
+        <div class="other-content">
+            {% include jobs.html %}
+        </div>
+    </div>
+    <!-- <footer>
+        {% include footer.html %}
+    </footer> -->
+
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const chevron = document.getElementById('chevron');
+    console.log('adding event listener');
+    console.log(window.scrollY);
+    window.addEventListener("scroll", () => {
+        console.log('scrolling');
+        if (window.scrollY === 0) {
+            chevron.style.opacity = '1';
+        } else {
+            chevron.style.opacity = '0';
+        }
+    });
+    console.log('added');
+});
+</script>
+</html>

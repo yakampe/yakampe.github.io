@@ -1,6 +1,3 @@
 ---
-layout: default
+layout: landing
 ---
-
-
-{% include jobs.html %}

@@ -10,8 +10,20 @@
     focus on applying TDD and adapting other XP practices. In addition to guiding teams in agile development, I contribute to curriculum 
     development to ensure that the learning experience is continuously improving and supports successful engineering outcomes.
   "
-  tech: spring, java, python, cobol, gitlab
+  tech: spring, java, python, gitlab, cobol
   id: 1
+
+- company: "NixOS Foundation"
+  role: "Summer of Nix participant"
+  start_date: "2024 May"
+  end_date: "2024 July"
+  logo: "/assets/images/nix.png"
+  description: "
+  nixos stuff
+  "
+  tech: nix, python
+  id: 2
+
 - company: "UK Data Service"
   role: "Development Manager"
   start_date: "2023 June"
@@ -43,7 +55,7 @@
    to decision-making and integrated into the architecture and platform development efforts.
   "
   tech: aws, python, github
-  id: 2
+  id: 3
 - company: "Grabyo"
   role: "Senior Software Engineer"
   start_date: "2022 June"
@@ -61,4 +73,25 @@
   I also inherited ownership of the Open Policy Agent (OPA) implementation and successfully finalised its rollout across the platform.
   "
   tech: spring, java, aws, github
-  id: 3
+  id: 4
+
+- company: "Commsoft"
+  role: "Head Of Development"
+  start_date: "2020 December"
+  end_date: "2022 June"
+  logo: "/assets/images/commsoft.png"
+  description: "
+  Head of development stuff
+  "
+  id: 5
+   
+- company: "Commsoft"
+  role: "Software Developer"
+  start_date: "2019 August"
+  end_date: "2022 December"
+  logo: "/assets/images/commsoft.png"
+  description: "
+  Senior Dev stuff
+  "
+  tech: java, spring, oracle, gcp, aws
+  id: 6
