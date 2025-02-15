@@ -5,6 +5,10 @@ $nav-height: 80px; // Navigation bar height
 $nav-height-mobile: 70px; // Navigation bar height
 $nav-font-size: 1.2rem;
 
+$font-family: Arial, sans-serif;
+
+
+
 
 $breakpoint-768: 768px; // For screens <= 768px
 
@@ -20,7 +24,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: Arial, sans-serif;
+    font-family: $font-family;
     background-color: #f9f9f9;
     color: #333;
     overflow-x: hidden;

@@ -35,7 +35,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: Arial, sans-serif;
+    font-family: $font-family;
 }
 
 .content {
@@ -52,7 +52,11 @@ body, html {
     font-size: 3rem;
     opacity: 1;
     transition: opacity 0.3s;
-    animation: bounce 1.5s infinite;
+    animation: bounce 1.2s infinite;
+}
+
+.chevron img {
+    height: 64px;
 }
 
 @keyframes bounce {
@@ -60,6 +64,6 @@ body, html {
         transform: translateX(-50%) translateY(0);
     }
     50% {
-        transform: translateX(-50%) translateY(-20px);
+        transform: translateX(-50%) translateY(-40px);
     }
 }

@@ -10,9 +10,11 @@
         <div class="content-landing">
             {% include hero.html %}
         </div>
-        <div id="chevron" class="chevron">&#x2193;</div>
+        <div id="chevron" class="chevron">
+            <img src="/assets/images/down.svg">
+        </div>
         <header>
-            <h1 class="jobs-section-header">Work History</h1>
+            <h1 class="jobs-section-header">Experience</h1>
         </header>
         <div class="other-content">
             {% include jobs.html %}
@@ -24,19 +26,40 @@
 
 </body>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
     const chevron = document.getElementById('chevron');
-    console.log('adding event listener');
-    console.log(window.scrollY);
-    window.addEventListener("scroll", () => {
-        console.log('scrolling');
-        if (window.scrollY === 0) {
-            chevron.style.opacity = '1';
-        } else {
+    const job_section_header = document.querySelector('.jobs-section-header');
+    const other_content = document.querySelector('.other-content');
+
+    let jobSectionVisible = false;
+    let otherContentVisible = false;
+
+    const updateChevronVisibility = () => {
+        if (jobSectionVisible || otherContentVisible) {
             chevron.style.opacity = '0';
+        } else {
+            chevron.style.opacity = '1';
         }
+    };
+
+    const other_content_observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            otherContentVisible = entry.isIntersecting;
+            updateChevronVisibility();
+        });
     });
-    console.log('added');
+
+    const job_section_observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            jobSectionVisible = entry.isIntersecting;
+            updateChevronVisibility();
+        });
+    });
+
+    if (other_content) other_content_observer.observe(other_content);
+    if (job_section_header) job_section_observer.observe(job_section_header);
 });
+
+
 </script>
 </html>
