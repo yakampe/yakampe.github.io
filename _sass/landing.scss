@@ -4,8 +4,9 @@
     font-weight: 600; /* Slightly bold */
     color: #333; /* Dark grey text colour */
     text-align: center; /* Centre the text */
-    margin-top: 40px; /* Space from the top of the section */
-    margin-bottom: 20px; /* Space below the header */
+    margin-top: 1px;
+    // margin-top: 40px; /* Space from the top of the section */
+    // margin-bottom: 20px; /* Space below the header */
     position: relative;
 }
 
@@ -18,7 +19,7 @@
     transform: translateX(-50%);
     width: 50%;
     height: 2px;
-    margin-top: 10px; /* Space between text and line */
+    // margin-top: 10px; /* Space between text and line */
 }
 
 /* Optional: Add some responsive typography */

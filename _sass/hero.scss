@@ -1,7 +1,11 @@
 $nav-height: 0px; // Navigation bar height
 $nav-height-mobile: 0px; // Navigation bar height
 
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+$font-button: "Doto", serif;
+
 .hero {
+    font-family: Arial, sans-serif;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -35,7 +39,6 @@ $nav-height-mobile: 0px; // Navigation bar height
 }
 
 .hero-title {
-    font-family: $font-family;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
@@ -44,23 +47,26 @@ $nav-height-mobile: 0px; // Navigation bar height
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .hero-cta {
     padding: 10px 20px;
-    background: #fff;
-    colour: #007BFF;
+    background: #ffaeae;
+    color: #000000;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
+    text-decoration: none;
+    font-family: $font-button;
+    font-weight: bold;
 }
 
 .hero-cta:hover {
-    background: #0056b3;
-    colour: #fff;
+    background: #ff6f6f;
 }
 
 .hero-image {
