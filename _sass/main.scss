@@ -1,8 +1,8 @@
 // Define variables
 $nav-bg-colour: #333;
 $nav-text-colour: #fff;
-$nav-height: 80px; // Navigation bar height
-$nav-height-mobile: 70px; // Navigation bar height
+$nav-height: 80px; 
+$nav-height-mobile: 70px;
 $nav-font-size: 1.2rem;
 
 $font-family: "Courier New", Courier, monospace;
@@ -12,14 +12,12 @@ $font-family: "Courier New", Courier, monospace;
 
 $breakpoint-768: 768px; // For screens <= 768px
 
-// Mixin for responsive styles
 @mixin respond-to-768 {
     @media (max-width: #{$breakpoint-768}) {
         @content;
     }
 }
 
-// Global reset and base styles
 html, body {
     margin: 0;
     padding: 0;
@@ -39,11 +37,11 @@ body {
 nav {
     background-color: $nav-bg-colour;
     color: $nav-text-colour;
-    height: $nav-height; // Fixed height
-    line-height: $nav-height; // Centres text vertically
+    height: $nav-height; 
+    line-height: $nav-height;
     font-size: $nav-font-size;
-    position: fixed; // Fix the nav bar to the top
-    width: 100%; // Span the full width
+    position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -51,8 +49,8 @@ nav {
 
     // Adjust for screens <= 768px
     @include respond-to-768 {
-        height: $nav-height-mobile; // Reduce height for smaller screens
-        line-height: $nav-height-mobile; // Maintain vertical centring
+        height: $nav-height-mobile;
+        line-height: $nav-height-mobile;
         font-size: 1rem;
     }
 }
@@ -67,37 +65,34 @@ nav a {
         text-decoration: underline;
     }
 
-    // Adjust font size for smaller screens
     @include respond-to-768 {
         font-size: 0.9rem;
     }
 }
 
-// Content container styles
 .content-wrap {
-    margin-top: $nav-height; // Push the content down below the fixed nav bar
+    margin-top: $nav-height;
 
-    // Adjust margin for smaller nav height
     @include respond-to-768 {
         margin-top: $nav-height-mobile;
     }
 }
 
-// Main content styles
 .content {
-    min-height: calc(100vh - $nav-height); // Ensure main content fills the remaining viewport height
+    min-height: calc(100vh - $nav-height);
     display: flex;
     flex-direction: column;
-    align-items: centre;
-    justify-content: centre;
-
-    // Adjust height for smaller nav
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto; /* centers the element inside the parent */
+    text-wrap: auto;
+    
     @include respond-to-768 {
         min-height: calc(100vh - $nav-height-mobile);
+        width: 90%; /* Adjust for mobile if needed */
     }
 }
 
-// Other content styles
 .other-content {
     padding: 20px;
 }

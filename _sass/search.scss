@@ -1,0 +1,63 @@
+/* Global Page Container */
+.page-container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Tags page styling */
+.tags-list {
+  margin-bottom: 2rem;
+}
+
+.tags-list ul, .tags-container ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tags-list li, .tags-container li {
+  margin: 0.5rem 0;
+}
+
+/* Links */
+.tags-list a, .tags-container a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.tags-list a:hover, .tags-container a:hover {
+  text-decoration: underline;
+}
+
+/* Search Box */
+.search-box {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.search-box input {
+  width: 50%;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Tags Container */
+.tags-container h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.post-date {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .search-box input {
+    width: 80%;
+  }
+}

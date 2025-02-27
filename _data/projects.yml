@@ -1,0 +1,9 @@
+projects:
+  - title: "TDD Predict"
+    image: "assets/images/projects/tddpredict.svg"
+    description: "TDD Predict."
+    link: "https://github.com/yakampe/tddpredict"
+  - title: "Flutter Flashcards"
+    image: "assets/images/projects/cards.svg"
+    description: "Flashcards."
+    link: "https://github.com/yakampe/flashcards"

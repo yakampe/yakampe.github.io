@@ -7,6 +7,7 @@ $font-button: "Doto", serif;
   position: relative;
   align-items: center;
   gap: 60px;
+  text-align: left;
 }
 
 
@@ -38,12 +39,12 @@ $font-button: "Doto", serif;
 
 
 .timeline-item:hover {
-  transform: translateX(0) scale(1.1) rotate(0.5deg);
+  transform: translateX(0) scale(1.1);
 }
 
 
 .timeline-item:hover:nth-child(#{$iterator-count})  {
-  transform: translateX(0) scale(1.1) rotate(0.8deg);
+  transform: translateX(0) scale(1.1);
 }
 
 .timeline-item:nth-child(#{$iterator-count})  {
@@ -81,6 +82,10 @@ $font-button: "Doto", serif;
 .collapsible.open {
   max-height: 100%;
   opacity: 1;
+}
+
+.timeline-item:nth-child(odd) .details-header {
+  text-align: left;
 }
 
 .timeline-item:nth-child(even) .details-header {

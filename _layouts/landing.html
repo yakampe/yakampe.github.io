@@ -14,11 +14,17 @@
             <img src="/assets/images/down.svg">
         </div>
         <header>
-            <h1 class="jobs-section-header">Experience</h1>
+            <h1 class="landing-header">Projects</h1>
+            <div class="other-content">
+                {% include projects.html %}
+            </div>
         </header>
-        <div class="other-content">
-            {% include jobs.html %}
-        </div>
+        <!-- <header>
+            <h1 class="landing-header">Achievements</h1>
+            <div class="other-content">
+                {% include achievements.html %}
+            </div>
+        </header> -->
     </div>
     <!-- <footer>
         {% include footer.html %}
@@ -28,7 +34,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
     const chevron = document.getElementById('chevron');
-    const job_section_header = document.querySelector('.jobs-section-header');
+    const job_section_header = document.querySelector('.landing-header');
     const other_content = document.querySelector('.other-content');
 
     let jobSectionVisible = false;

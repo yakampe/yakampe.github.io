@@ -1,0 +1,94 @@
+/* Blog Layout for Posts (Driving License Style) - Improved Alignment */
+
+
+.blog-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.blog-item {
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  gap: 20px; /* Increased gap for better spacing */
+  transition: background 0.3s ease-in-out;
+  align-items: flex-start;
+}
+
+.blog-item:hover {
+  background: #f9f9f9;
+}
+
+.blog-image-container {
+  flex: 0 0 150px;
+}
+
+.blog-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.blog-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-title,
+.blog-excerpt,
+.blog-date {
+  text-align: left; /* Align text to the left */
+}
+
+.blog-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s ease-in-out;
+  margin-bottom: 5px;
+}
+
+.blog-title:hover {
+  color: #0077cc;
+}
+
+.blog-excerpt {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: auto;
+}
+
+.blog-date {
+  font-size: 0.9rem;
+  color: #888;
+  align-self: flex-start;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  .blog-image {
+    display: none;
+  }
+
+  .blog-item {
+    flex-direction: column; /* Stack image and content on mobile */
+    align-items: stretch; /* Stretch content to full width */
+  }
+
+  .blog-image-container {
+    flex: 0 0 auto;
+    width: 100%; /* Full width image on mobile */
+    margin-bottom: 10px; /* Add margin below the image */
+  }
+
+  .blog-content {
+    width:100%;
+  }
+
+}

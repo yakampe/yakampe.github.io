@@ -1,0 +1,63 @@
+.projects-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 1rem;
+}
+
+.projects-wrapper {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.project-image {
+    width: 128px;
+    height: 128px;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.project-description {
+    font-size: 0.9rem;
+    color: #555;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+}
+
+
+.project-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 10px 20px;
+    background: #ffaeae;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: $font-button;
+    font-weight: bold;
+    text-align: center;
+}
+
+.project-link:hover {
+    background: #ff6f6f;
+}

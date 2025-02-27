@@ -1,17 +1,13 @@
-/* Jobs Section Header */
-.jobs-section-header {
-    font-size: 2.5rem; /* Make the header larger */
-    font-weight: 600; /* Slightly bold */
-    color: #333; /* Dark grey text colour */
-    text-align: center; /* Centre the text */
+
+.landing-header {
+    font-size: 2.5rem; 
+    font-weight: 600;
+    color: #333;
+    text-align: center;
     margin-top: 1px;
-    // margin-top: 40px; /* Space from the top of the section */
-    // margin-bottom: 20px; /* Space below the header */
     position: relative;
 }
-
-/* Add an underline effect */
-.jobs-section-header::after {
+.landing-header::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -19,19 +15,13 @@
     transform: translateX(-50%);
     width: 50%;
     height: 2px;
-    // margin-top: 10px; /* Space between text and line */
 }
-
-/* Optional: Add some responsive typography */
 @media (max-width: 768px) {
-    .jobs-section-header {
-        font-size: 2rem; /* Slightly smaller font size on smaller screens */
+    .landing-header {
+        font-size: 2rem;
     }
 }
 
-
-
-/* chevron */
 body, html {
     margin: 0;
     padding: 0;
@@ -39,10 +29,8 @@ body, html {
     font-family: $font-family;
 }
 
-.content {
-    height: 2000px; /* Just for demo purposes */
+.landing-content {
     text-align: center;
-    padding-top: 100px;
 }
 
 .chevron {

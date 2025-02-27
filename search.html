@@ -1,0 +1,67 @@
+---
+layout: page
+title: "Search"
+permalink: /search/
+---
+
+<div class="page-container">
+    <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search posts..." onkeyup="filterContent()">
+    </div>
+
+    <div class="tags-list">
+        {% assign sorted_tags = site.tags | sort %}
+        <div class="tags-container">
+            {% for tag in sorted_tags %}
+                <h2 id="{{ tag[0] }}" class="tag-header">{{ tag[0] }}</h2>
+                <ul class="tag-posts">
+                    {% for post in tag[1] %}
+                        <li class="post-item" data-title="{{ post.title | downcase }}" data-tags="{{ post.tags | join: ' ' | downcase }}">
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                            <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<script>
+function filterContent() {
+    let input = document.getElementById('search-input').value.toLowerCase();
+    let posts = document.querySelectorAll('.post-item');
+    let tagHeaders = document.querySelectorAll('.tag-header');
+
+    // Iterate over all posts and filter them based on the title or tag match
+    posts.forEach(function(post) {
+        let postTitle = post.getAttribute('data-title');
+        let postTags = post.getAttribute('data-tags');
+        
+        // If the title or tags include the search term, show the post
+        if (postTitle.includes(input) || postTags.includes(input)) {
+            post.style.display = ''; // Show post
+        } else {
+            post.style.display = 'none'; // Hide post
+        }
+    });
+
+    // Now, filter tags (h2 headers) based on whether they contain any visible posts
+    tagHeaders.forEach(function(header) {
+        let tagName = header.id.toLowerCase(); // Tag name is the header's id
+        let tagPosts = header.nextElementSibling.querySelectorAll('.post-item');
+        
+        // Check if any post in this tag section is visible
+        let hasVisiblePosts = Array.from(tagPosts).some(function(post) {
+            return post.style.display !== 'none'; // Check if post is not hidden
+        });
+
+        // Show or hide the header based on the visibility of posts under this tag
+        if (hasVisiblePosts || tagName.includes(input)) {
+            header.style.display = ''; // Show the header if there are visible posts or tag matches the search
+        } else {
+            header.style.display = 'none'; // Hide the header if no posts match
+        }
+    });
+}
+</script>
