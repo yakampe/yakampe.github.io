@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Post about TDD predict"
 date:   2025-01-24 11:33:12 +0000
 categories: tdd
@@ -7,8 +7,10 @@ tags:
 - TDD
 - Project
 - Code
-image: '../assets/images/posts/logo.png'
+image: '../assets/images/posts/trafficlight.jpg'
 image-alt: 'header image for second post'
+medium-link: 'https://medium.com/'
+dev-to-link: 'https://dev.to/'
 ---
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.

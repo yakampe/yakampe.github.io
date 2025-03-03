@@ -7,14 +7,42 @@ permalink: /blog/
 <ul class="blog-list">
   {% for post in site.posts limit:5 %}
   <li class="blog-item">
+    {% if post.image %}
     <div class="blog-image-container">
-      <img src="{{ post.image }}" alt="{{ post.image-alt}}" class="blog-image">
+      
+      <a href="{{ post.url }}" class="blog-title">
+        <img src="{{ post.image }}" alt="{{ post.image-alt}}" class="blog-image">
+      </a>
     </div>
+    {% endif %}
     <div class="blog-content">
-      <a href="{{ post.url }}" class="blog-title">{{ post.title }}</a>
-      <p class="blog-excerpt">{{ post.excerpt }}</p>
+      <div class="blog-title">
+        <a href="{{ post.url }}" class="blog-title">{{ post.title }}</a>
+      </div>
+      <div class="blog-excerpt"><a href={{ post.url }}>{{ post.excerpt }}</a></div>
       <span class="blog-date">{{ post.date | date: "%-d %B %Y" }}</span>
+
+      <div class="blog-socials-container">
+        <div class="blog-socials">
+          {% if post.medium-link %}
+          <a href="{{ page.medium-link }}"><img src="/assets/images/socials/medium.svg" alt="medium logo"
+              class="blog-socials-logo"></a>
+          {% endif %}
+          {% if post.dev-to-link %}
+          <a href="{{ page.dev-to-link }}"><img src="/assets/images/socials/devto.svg" alt="dev.to logo"
+              class="blog-socials-logo"></a>
+          {% endif %}
+        </div>
+        <div class="blog-button-wrapper" style="justify-content: end;">
+          <a href="{{ post.url }}" class="blog-button">Read More</a>
+        </div>
+      </div>
     </div>
   </li>
   {% endfor %}
+  <li>
+    <div class="blog-button-wrapper">
+      <a href="/search" class="blog-button">Search for more posts</a>
+    </div>
+  </li>
 </ul>
