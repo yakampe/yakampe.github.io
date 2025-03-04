@@ -46,3 +46,46 @@ permalink: /blog/
     </div>
   </li>
 </ul>
+
+<script>
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+    updateImageHeights(); // Call your function to update image heights after page is fully loaded
+});
+
+function updateImageHeights() {
+    // Only apply on desktop
+    if (window.innerWidth > 768) {
+        document.querySelectorAll('.blog-item').forEach(blogItem => {
+            let contentHeight = blogItem.querySelector('.blog-content')?.offsetHeight;
+            let imageContainer = blogItem.querySelector('.blog-image-container');
+            let image = imageContainer?.querySelector('.blog-image');
+
+            if (contentHeight && imageContainer && image) {
+                imageContainer.style.height = contentHeight + 'px';
+
+                let scaleValue = Math.max(0.375, Math.min(1, (contentHeight / 450)));
+
+                image.style.transform = `scale(${scaleValue})`;
+            }
+        });
+    } else {
+        // Reset mobile
+        document.querySelectorAll('.blog-item').forEach(blogItem => {
+            let imageContainer = blogItem.querySelector('.blog-image-container');
+            let image = imageContainer?.querySelector('.blog-image');
+
+            if (imageContainer && image) {
+                imageContainer.style.height = 'auto';
+                image.style.transform = 'none';
+            }
+        });
+    }
+}
+
+// Run on page load and whenever the window resizes
+// window.addEventListener('load', updateImageHeights);
+window.addEventListener('resize', updateImageHeights);
+
+
+</script>

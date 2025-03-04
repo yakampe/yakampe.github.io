@@ -1,4 +1,10 @@
-/* Blog Layout for Posts (Driving License Style) - Improved Alignment */
+body {
+  opacity: 0;
+}
+
+body.loaded {
+  opacity: 1;
+}
 
 
 .blog-list {
@@ -12,7 +18,7 @@
   display: flex;
   padding: 15px;
   border-bottom: 1px solid #ddd;
-  gap: 20px; /* Increased gap for better spacing */
+  gap: 20px; 
   transition: background 0.3s ease-in-out;
   align-items: flex-start;
 }
@@ -22,14 +28,28 @@
 }
 
 .blog-image-container {
-  flex: 0 0 150px;
+  border-radius: 8px;
+  width: 150px;     
+  max-height: 300px;
+  overflow: hidden;
+  display: flex;     
+  align-items: center; 
+  justify-content: center;
+}
+
+.image-container {
+  width: 150px;      
+  max-height: 300px; 
+  overflow: hidden;  
+  display: flex;     
+  align-items: center; 
+  justify-content: center; 
 }
 
 .blog-image {
-  width: 150px;
-  height: auto;
+  max-height: 100%;
   border-radius: 8px;
-  display: block;
+  object-fit: none;
 }
 
 .blog-content {
@@ -41,7 +61,7 @@
 .blog-title,
 .blog-excerpt,
 .blog-date {
-  text-align: left; /* Align text to the left */
+  text-align: left; 
 }
 
 .blog-date {
@@ -122,21 +142,24 @@
   background: #ff6f6f;
 }
 
-/* Responsive adjustments for mobile */
+
 @media (max-width: 600px) {
   .blog-image {
-    margin: auto;
+    transform: scale(1.0);
+    object-fit: cover;
+    width: 100%;
   }
 
   .blog-item {
-    flex-direction: column; /* Stack image and content on mobile */
-    align-items: stretch; /* Stretch content to full width */
+    flex-direction: column; 
+    align-items: stretch; 
   }
 
   .blog-image-container {
     flex: 0 0 auto;
-    width: 100%; /* Full width image on mobile */
-    margin-bottom: 10px; /* Add margin below the image */
+    width: 100%; 
+    margin-bottom: 10px; 
+    max-height: 150px;
   }
 
   .blog-content {

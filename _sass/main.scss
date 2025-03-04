@@ -84,12 +84,12 @@ nav a {
     flex-direction: column;
     text-align: left;
     max-width: 800px;
-    margin: 0 auto; /* centers the element inside the parent */
+    margin: 0 auto; 
     text-wrap: auto;
     
     @include respond-to-768 {
         min-height: calc(100vh - $nav-height-mobile);
-        width: 90%; /* Adjust for mobile if needed */
+        width: 90%; 
     }
 }
 
