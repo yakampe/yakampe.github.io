@@ -1,7 +1,10 @@
 <head>
     <meta charset="utf-8">
+    {% if page.title %}
     <title>{{ page.title }}</title>
+    {% else %}
+    <title> kampe.uk </title> 
+    {% endif %}
     <link rel="stylesheet" href="/assets/css/styles.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-
 </head>

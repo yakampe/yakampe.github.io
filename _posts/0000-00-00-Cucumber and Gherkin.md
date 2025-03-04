@@ -7,11 +7,12 @@ tags:
 - BDD
 - ATDD
 - Code
-image: '../assets/images/posts/bdd.jpg'
+image: '../assets/images/posts/bdd.webp'
 image-alt: 'header image for bdd'
 excerpt_separator: "<!--exc-->"
 medium-link: 'https://medium.com/'
 dev-to-link: 'https://dev.to/'
+meta-description: 'Janis Yanis Kampe Blog: Cucumber and Gherkin, BDD, ATDD, Code'
 ---
 
 Behaviour-Driven Development (BDD) offers a dynamic and collaborative approach to software development, and tools like Cucumber and Gherkin make it easier to bring this methodology to life. Rather than diving directly into complex coding tasks, BDD encourages teams to collaboratively define application behaviour in simple, human-readable language. By using Gherkin syntax to write clear, structured feature files, developers, testers, and business stakeholders can ensure they all share a common understanding of the product's functionality.  <!--exc-->  This approach provides a safe and enjoyable environment to experiment, learn, and prepare for the real challenges of building software, making it an effective and fun way to approach development. In this blog, we'll explore how Cucumber and Gherkin can help you improve collaboration, streamline development, and ensure your work is always in line with the desired outcomes.

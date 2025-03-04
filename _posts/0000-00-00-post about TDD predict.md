@@ -7,10 +7,11 @@ tags:
 - TDD
 - Project
 - Code
-image: '../assets/images/posts/trafficlight.jpg'
+image: '../assets/images/posts/trafficlight.webp'
 image-alt: 'header image for second post'
 medium-link: 'https://medium.com/'
 dev-to-link: 'https://dev.to/'
+meta-description: 'Janis Yanis Kampe Blog: TDD Predicut plugin, JetBrains'
 ---
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
