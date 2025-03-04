@@ -49,8 +49,11 @@ permalink: /blog/
 
 <script>
 window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
-    updateImageHeights(); // Call your function to update image heights after page is fully loaded
+  const blogList = document.querySelector('.blog-list');
+    if (blogList) {
+        blogList.classList.add('loaded'); 
+    }
+    updateImageHeights();
 });
 
 function updateImageHeights() {
