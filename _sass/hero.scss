@@ -1,7 +1,13 @@
 $nav-height: 0px;
 $nav-height-mobile: 0px;
 
-@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+@font-face {
+    font-family: 'Doto';
+    src: url('/assets/fonts/Doto-Bold.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
 $font-button: "Doto", serif;
 
 .hero {
